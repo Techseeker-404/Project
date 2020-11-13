@@ -32,9 +32,9 @@ def predict_car_price(car_name,loctn,yr,km_driven,Fuel,
                 "Power":power,
 
               },index=[0])
-    print("predicted price of the car in lakhs.")
+    print("Predicted price of the car in lakhs.")
     
-    return __model.predict(new_df)
+    return __model.predict(new_df)[0]
 
 
 """   
