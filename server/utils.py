@@ -18,24 +18,25 @@ __model = None
 """   
 def predict_car_price(car_name,loctn,yr,km_driven,Fuel,
                       Tnsm,owner,mileage,Engn,power):
-                     
-    new_df = pd.DataFrame({
-                "Name":car_name,
-                "Location":loctn,
-                "Year":yr,
-                "Kilometers_Driven":km_driven,
-                "Fuel_Type":Fuel,
-                "Transmission":Tnsm,
-                "Owner_Type":owner,
-                "Mileage":mileage,
-                "Engine":Engn,
-                "Power":power,
+    try:                 
+        new_df = pd.DataFrame({
+                    "Name":car_name,
+                    "Location":loctn,
+                    "Year":yr,
+                    "Kilometers_Driven":km_driven,
+                    "Fuel_Type":Fuel,
+                    "Transmission":Tnsm,
+                    "Owner_Type":owner,
+                    "Mileage":mileage,
+                    "Engine":Engn,
+                    "Power":power,
 
-              },index=[0])
-    print("Predicted price of the car in lakhs.")
-    
-    return __model.predict(new_df)[0]
-
+                },index=[0])
+        #print("Predicted price of the car in lakhs.")
+        #return new_df
+        return round(__model.predict(new_df)[0],3).astype(str) + ' lakhs'
+    except TypeError:
+        raise("Check out the values entered ,shouldn't leave any columns blank")
 
 """   
  function to load "API" calling dependencies for web app as this serve as model and detail serving 
@@ -78,9 +79,11 @@ def get_fuel():
 def get_tranmn():
     return __transmission
 
+
 ## run ##
 if __name__ == "__main__":
     load_api_files()
     #just check
-    print(get_tranmn())
-    print(predict_car_price("Maruti sx4","Delhi",2014,32007,"Petrol","Manual","Second",19,1348.0,84))
+    print(get_locations())
+    print(predict_car_price("Maruti alto","Thiruvananthapuram",2011,34007,"Petrol","Manual","Second",21,848.0,67))
+    print(predict_car_price("Ford Ecosport","Delhi",2014,45007,"Diesel","Manual","Second",17,1498.0,99))
