@@ -25,7 +25,7 @@
 	margin-right: -1px;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-	transition: all 0.1s ease-in-out;
+	transition:all 0.01s ease-in-out;
 }
 
 .switch-field label:hover {
@@ -54,14 +54,22 @@
 	padding-left: 16px;
 	z-index: 2;
 }
+
 h1 {
-    font-size: 28px;
+    font-size: 25px;
     margin-bottom: 8px;
     text-align: center;
     color: rgb(126, 91, 27);
     text-decoration-line: underline;
     text-decoration-style: straight;
     text-decoration-color: black;
+}
+h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-align: center;
+    color: rgb(4, 102, 4);
+    
 }
 .carname{
     font-family: "Roboto", sans-serif;
@@ -73,24 +81,130 @@ h1 {
     padding: 10px;
     box-sizing:border-box;
     font-size: 15px;
-    height: 45px;
+    height: 30px;
     border-radius: 5px;
     
 
 }
 h5 {
-    font-size: 16px;
+    font-size: 12.5px;
+    color:rgb(58, 26, 26);
     margin-bottom: 8px;
     text-align:left;
     color: rgb(10, 10, 9);
     line-height: 0px;
     
 }
+.location{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 76%;
+    border: 0;
+    margin:  0 0 10px ;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 36px;
+    border-radius: 5px;
+  }
+  h4 {
+    font-size: 11px;
+    margin-bottom: 8px;
+    text-align: center;
+    color: rgb(8, 20, 133);
+  }
+  
+.Year{
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 76%;
+    border: 0;
+    margin: 0 0 10px;
+    padding: 10px;
+    box-sizing:border-box;
+    font-size: 15px;
+    height: 30px;
+    border-radius: 5px;
+    
+}
+.KilomteresDriven{
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 76%;
+    border: 0;
+    margin: 0 0 10px;
+    padding: 10px;
+    box-sizing:border-box;
+    font-size: 15px;
+    height: 30px;
+    border-radius: 5px;
+    
+}
+.Fuel{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 76%;
+    border: 0;
+    margin:  0 0 10px ;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 36px;
+    border-radius: 5px;
+  }
+  .Mileage{
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 76%;
+    border: 0;
+    margin: 0 0 10px;
+    padding: 10px;
+    box-sizing:border-box;
+    font-size: 15px;
+    height: 30px;
+    border-radius: 5px;
 
+}
+
+
+.submit{
+    background: #a5dc86;
+    width: 76%;
+    border: 0;
+    margin: 25px 0 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+      height: 35px;
+      text-align: center;
+      border-radius: 5px;
+  }
+ .submit :hover {
+    box-shadow: 0 12px 16px 0 rgba(83, 32, 32, 0.24),0 17px 50px 0 rgba(63, 17, 17, 0.19);
+  }
+  
+  .result{
+          background: #dcd686;
+          width: 76%;
+          border: 0;
+          margin: 25px 0 10px;
+          box-sizing: border-box;
+          font-size: 15px;
+          height: 35px;
+          text-align: center;
+  }
+  
 
 
 .image {
-    background: url('https://images.unsplash.com/photo-1566009002888-a8e15b0e1650?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80'); 
+    background: url('https://i.pinimg.com/originals/25/ac/08/25ac08e865ec712107f7a1ad01d9f540.png'); 
+    /* background:url('https://images.unsplash.com/photo-1566009002888-a8e15b0e1650?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80'); */
      background-repeat: no-repeat;
     background-size: auto;
     background-size:100% 100%;
@@ -105,5 +219,5 @@ h5 {
     top: 0;
     left: 0;
     z-index: -1;
-  }
+}
   
