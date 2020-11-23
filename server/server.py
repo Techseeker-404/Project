@@ -8,8 +8,8 @@ def get_saved_api():
     response = jsonify({
         #'car_model_names':utils.get_names(),
         'Location':utils.get_locations(),
-        'Owner-Type':utils.get_own_type(),
-        'Fuel-Type':utils.get_fuel(),
+        'Owner_Type':utils.get_own_type(),
+        'Fuel_Type':utils.get_fuel(),
         'Transmission':utils.get_tranmn(),
 
     })
