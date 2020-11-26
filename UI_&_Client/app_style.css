@@ -59,16 +59,20 @@ h1 {
     font-size: 25px;
     margin-bottom: 8px;
     text-align: center;
-    color: rgb(126, 91, 27);
+    color: rgb(119, 81, 5);
     text-decoration-line: underline;
     text-decoration-style: straight;
     text-decoration-color: black;
+}
+mark{
+    background-color: rgb(111, 179, 131);
+    color: rgb(130, 63, 0);
 }
 h3 {
     font-size: 14px;
     margin-bottom: 8px;
     text-align: center;
-    color: rgb(4, 102, 4);
+    color: rgb(4, 27, 102);
     
 }
 .carname{

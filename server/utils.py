@@ -34,7 +34,7 @@ def predict_car_price(car_name,loctn,yr,km_driven,Fuel,
                 },index=[0])
         #print("Predicted price of the car in lakhs.")
         #return new_df
-        return round(__model.predict(new_df)[0],3).astype(str) + ' lakhs'
+        return round(__model.predict(new_df)[0],3).astype(str) 
     except TypeError:
         raise("Check out the values entered ,shouldn't leave any columns blank")
 
