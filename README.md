@@ -11,3 +11,4 @@ This is a portfolio Machine Learning Project based on advanced regeresion techni
 Special acknowledgement to Kaggle Dataset.
 
 ###### Later on we have special priorities and interest in developing our own dataset & Maintaining our model engine.
+![](car_gif.gif)
