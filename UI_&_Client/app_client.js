@@ -69,6 +69,7 @@ function onPageload(){
         if (data){
             var locations = data.Location;
             var Fuel_type = data.Fuel_Type;
+            var carname = data.car_model_names;
             var uilocations = document.getElementById("uiLocations");
             $('#uiLocations').empty();
             for(var i in locations){
@@ -81,6 +82,13 @@ function onPageload(){
                 var opt1 = new Option(Fuel_type[i]);
                 $('#uiFuel').append(opt1);
             }
+            var uicarname = document.getElementById("uiCarname");
+            $('#carlist').empty();
+            for(var i in carname){
+                var opt2 = new Option(carname[i]);
+                $('#carlist').append(opt2);
+            }
+
         }           
     });
 

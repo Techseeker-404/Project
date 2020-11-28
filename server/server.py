@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/get_saved_api',methods=['GET'])
 def get_saved_api():
     response = jsonify({
-        #'car_model_names':utils.get_names(),
+        'car_model_names':utils.get_names(),
         'Location':utils.get_locations(),
         'Owner_Type':utils.get_own_type(),
         'Fuel_Type':utils.get_fuel(),
