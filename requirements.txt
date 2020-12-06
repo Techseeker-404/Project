@@ -1,0 +1,10 @@
+pandas==1.0.5
+Flask==1.1.2
+Werkzeug==1.0.1
+xgboost==1.2.0
+scikit-learn==0.23.1
+MarkupSafe==1.1.1
+Jinja2==2.11.2
+gunicorn==20.0.4
+numpy==1.18.5
+
