@@ -1,6 +1,8 @@
 
 # Project
-
+![Python](https://img.shields.io/badge/Python-3.8-blueviolet)
+![Framework](https://img.shields.io/badge/Framework-Flask-red)
+![Frontend](https://img.shields.io/badge/Frontend-HTML/CSS/JS-green)
 
 This is a portfolio Machine Learning Project based on advanced regeresion techniques to predict the market rate of used cars in the Indian car market .
 ### This project is divided into specifically 3 steps .
