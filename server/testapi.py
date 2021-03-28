@@ -1,10 +1,9 @@
 #!/usr/bin/python3.8
 import uvicorn
-from fastapi import FastAPI, Form,Depends, Request
+from fastapi import FastAPI, Form
 #from starlette.middleware.cors import CORSMiddleware
 from fastapi.middleware.cors import CORSMiddleware 
 from fastapi.responses import JSONResponse
-from pydantic import BaseModel
 import utils
 
 app = FastAPI()
@@ -46,7 +45,8 @@ async def get_saved_api():
 """
     
 @app.post("/predict_car_price",status_code=200)
-async def predict_price(  car_name: str = Form(...), 
+async def predict_price( 
+                          car_name: str = Form(...), 
                           loctn: str = Form(...),
                           yr: int = Form(...),
                           km_driven: int = Form(...),
@@ -56,7 +56,7 @@ async def predict_price(  car_name: str = Form(...),
                           mileage: float = Form(...),
                           Engn: float = Form(...),
                           power: float = Form(...)
-                          ):
+                       ):
 
 
     response = JSONResponse (
