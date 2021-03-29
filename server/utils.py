@@ -16,7 +16,7 @@ __model = None
  prediction happens.
 
 """   
-def predict_car_price(car_name,loctn,yr,km_driven,Fuel,
+async def predict_car_price(car_name,loctn,yr,km_driven,Fuel,
                       Tnsm,owner,mileage,Engn,power):
     try:                 
         new_df = pd.DataFrame({
