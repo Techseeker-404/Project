@@ -36,23 +36,25 @@ function onClickedEstimatePrice(){
     //variable for Estimated price.
     var estprice = document.getElementById("uiEstimatedPrice");
      
-    var url = "http://127.0.0.1:5000/predict_car_price";
+    var url = "http://127.0.0.1:7000/predict_car_price";
 
-   // var url = "/api/predict_car_price"; // For online deployement api call.
-
-   $.post(url, {
-    car_name:car_name.value,
-    loctn:loctn.value,
-    yr:parseInt(yr.value),
-    km_driven:parseInt(km_driven.value),
-    Fuel:Fuel.value,
-    Tnsm:Tnsm,
-    owner:owner,
-    mileage:parseFloat(mileage.value),
-    Engn:parseFloat(Engn.value),
-    power:parseFloat(power.value)
+    //var url = "/api/predict_car_price"; // For online deployement api call.
+    const entireObj = {
+        "car_name":car_name.value,
+        "loctn":loctn.value,
+        "yr":parseInt(yr.value),
+        "km_driven":parseInt(km_driven.value),
+        "Fuel":Fuel.value,
+        "Tnsm":Tnsm,
+        "owner":owner,
+        "mileage":parseFloat(mileage.value),
+        "Engn":parseFloat(Engn.value),
+        "power":parseFloat(power.value)
  
-   },function(data,status) {
+   };
+    const Obj = JSON.stringify(entireObj);
+
+   $.post(url, Obj,function(data,status) {
        console.log(data.estimated_Price);
        estprice.innerHTML = "<h2>" + data.estimated_Price.toString()  + " Lakhs</h2>";
        console.log(status);
@@ -62,8 +64,8 @@ function onClickedEstimatePrice(){
 // Function to load Json datas into the Location and Fuel_Type Column
 function onPageload(){
     console.log("document loaded");
-    var url = "http://127.0.0.1:5000/get_saved_api";
-    // var url = "/api/get_saved_api"; //
+    var url = "http://127.0.0.1:7000/get_saved_api";
+    //var url = "/api/get_saved_api"; //
     $.get(url,function(data, status){
         console.log("got saved api call files responses");
         if (data){
