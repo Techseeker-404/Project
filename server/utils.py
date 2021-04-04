@@ -1,6 +1,9 @@
 import json
 import pickle as pck
 import pandas as pd
+import asyncio
+import warnings
+warnings.filterwarnings("ignore")
 
 #initialising web app variables for Price prediction.
 __data = None
@@ -79,11 +82,16 @@ def get_fuel():
 def get_tranmn():
     return __transmission
 
-
+"""
+    Main function to run predict function.
+"""
+async def main():
+    print(await predict_car_price("Maruti alto","Thiruvananthapuram",2011,34007,"Petrol","Manual","Second",21,848.0,67))
+    print(await predict_car_price("Ford Ecosport","Delhi",2014,45007,"Diesel","Manual","Second",17,1498.0,99))
+    
 ## run ##
 if __name__ == "__main__":
     load_api_files()
     #just check
     print(get_locations())
-    print(predict_car_price("Maruti alto","Thiruvananthapuram",2011,34007,"Petrol","Manual","Second",21,848.0,67))
-    print(predict_car_price("Ford Ecosport","Delhi",2014,45007,"Diesel","Manual","Second",17,1498.0,99))
+    asyncio.run(main())
