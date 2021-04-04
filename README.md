@@ -8,7 +8,7 @@ This is a portfolio Machine Learning Project based on advanced regeresion techni
 ### This project is divided into specifically 3 steps .
 ##### 1) Exploratory data analysis and Model creation.
 ##### 2) Creating a Rest API and serving it to a web-based application.
-##### 3) Deploying our Model as a usable one in web.
+##### 3) Deploying our Model using Nginx and AWS ec2-instance.
 
 Special acknowledgement to Kaggle Dataset.
 
