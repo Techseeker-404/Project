@@ -58,11 +58,11 @@ async def predict_price(price: Price):
 
             {
                 "estimated_Price": await utils.predict_car_price (
-                    price.car_name, price.loctn,
-                    price.yr, price.km_driven,
-                    price.Fuel, price.Tnsm,
-                    price.owner, price.mileage,
-                    price.Engn, price.power
+                        price.car_name, price.loctn,
+                        price.yr, price.km_driven,
+                        price.Fuel, price.Tnsm,
+                        price.owner, price.mileage,
+                        price.Engn, price.power
                     )
             }
     )       
